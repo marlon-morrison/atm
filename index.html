@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <canvas></canvas>
+        <div class="layer"></div>
+        <div class="front">
+            <h1>welcome to onestate <br> where we take care of one person's needs</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                         <div id="login">
+                            <p>please insert your pin</p>
+                            <div class="numbers">
+                                <input type="password" id="output" maxlength="4" type="number">
+                            </div>
+                            <div class="space">
+                                <span class="number" data-value="7">7</span>
+                                <span class="number" data-value="8">8</span>
+                                <span class="number" data-value="9">9</span>
+                            </div>
+                            <div class="space">
+                                <span class="number" data-value="4">4</span>
+                                <span class="number" data-value="5">5</span>
+                                <span class="number" data-value="6">6</span>
+                            </div>
+                            <div class="space">
+                                <span class="number" data-value="1">1</span>
+                                <span class="number" data-value="2">2</span>
+                                <span class="number" data-value="3">3</span>
+                            </div>
+                            <div class="space">
+                                <span class="number zero" data-value="0">0</span>
+                            </div>
+                            <p id="invalid"></p>
+                            <button onclick="confirmP()">Submit</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-4"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                        <div id="mainScreen">
+                            <div id="name"></div>
+                            <div id="bar">------------------------------------------</div>
+                            <button onclick="logout()" id="logout">logout</button>
+                            <div id="take">withdrawal</div>
+                            <div id="putIn">deposit</div>
+                            <div>------------------------------------------</div>
+                            <div id="checkingsB"></div>
+                            <div id="savingsB"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div id="withdrawal">
+                            <div id="name"></div>
+                            <button onclick="logout()" id="logout">logout</button>
+                            <p>check rather you want to withdrawal from your savings or checking before submiting</p>
+                            <form action="">
+                                <div id="checkingsD"></div>
+                                <div id="savingsD"></div>
+                                <div id="moneyoutput">
+                                    <input class="check" id="checkingsC" type="radio" name="rsvp" checked>checkings
+                                    <input class="check" id="savingsC" type="radio" name="rsvp" >savings
+                                </div>
+                                <input type="number" min="1" id="amountW">
+                                <button type="reset" id="submit" onclick="calcWithdrawal()">submit</button>
+                            </form>
+                            <p id="thanks"></p>
+                            <button onclick="mainS()">back</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div id="deposit">
+                            <div id="name"></div>
+                            <button onclick="logout()" id="logout">logout</button>
+                            <p>check rather you want to deposit from your savings or checking before submiting</p>
+                            <form action="">
+                                <div id="checkingsD"></div>
+                                <div id="savingsD"></div>
+                                <div id="moneyoutput">
+                                    <input class="check" id="checkingD" type="radio" name="rsvp" checked>checkings
+                                    <input class="check" id="savingD" type="radio" name="rsvp" >savings
+                                </div>
+                                <input type="number" min="1" id="amountD">
+                                <button id="submit" type="reset"  onclick="calcDeposit()">submit</button>
+                                <div id="money"></div>
+                            </form>
+                            <p id="thanks"></p>
+                            <button onclick="mainS()">back</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>

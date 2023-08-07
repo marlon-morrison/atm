@@ -10,39 +10,49 @@
 </head>
 <body>
     <main>
-        <canvas></canvas>
-        <div class="layer"></div>
-        <div class="front">
-            <h1>welcome to onestate <br> where we take care of one person's needs</h1>
+        <!-- <canvas class="can"></canvas> -->
+        <h1>welcome to onestate <br> where we take care of one person's needs</h1>
+        <div class="pinlist">
+            <h2>pin list</h2>
+            <p>tom:2134</p>
+            <p>sam:3434</p>
+            <p>troy:1134</p>
+            <p>randy:1415</p>
+            <p>robert:1551</p>
+            <p>fetty:1738</p>
+            <p>marquez:2853</p>
+            <p>michael:8418</p>
+        </div>
+        <img class="backG" src="media/atm.jpg" alt="">
+        <div class="layer">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4"></div>
                     <div class="col-sm-4">
-                         <div id="login">
+                        <div id="login">
                             <p>please insert your pin</p>
                             <div class="numbers">
                                 <input type="password" id="output" maxlength="4" type="number">
                             </div>
+                        </div>
+                        <div id="Numpad">
                             <div class="space">
                                 <span class="number" data-value="7">7</span>
                                 <span class="number" data-value="8">8</span>
                                 <span class="number" data-value="9">9</span>
                             </div>
-                            <div class="space">
+                            <div class="space2">
                                 <span class="number" data-value="4">4</span>
                                 <span class="number" data-value="5">5</span>
                                 <span class="number" data-value="6">6</span>
                             </div>
-                            <div class="space">
+                            <div class="space3">
                                 <span class="number" data-value="1">1</span>
                                 <span class="number" data-value="2">2</span>
                                 <span class="number" data-value="3">3</span>
                             </div>
-                            <div class="space">
-                                <span class="number zero" data-value="0">0</span>
-                            </div>
                             <p id="invalid"></p>
-                            <button onclick="confirmP()">Submit</button>
+                            <button class="logbutton" onclick="confirmP()">Submit</button>
                         </div>
                     </div>
                     <div class="col-sm-4"></div>
@@ -72,8 +82,7 @@
                     <div class="col-sm-8">
                         <div id="withdrawal">
                             <div id="name"></div>
-                            <button onclick="logout()" id="logout">logout</button>
-                            <p>check rather you want to withdrawal from your savings or checking before submiting</p>
+                            <p>withdrawal from savings or checking?</p>
                             <form action="">
                                 <div id="checkingsD"></div>
                                 <div id="savingsD"></div>
@@ -97,8 +106,7 @@
                     <div class="col-sm-8">
                         <div id="deposit">
                             <div id="name"></div>
-                            <button onclick="logout()" id="logout">logout</button>
-                            <p>check rather you want to deposit from your savings or checking before submiting</p>
+                            <p>deposit in savings or checking?</p>
                             <form action="">
                                 <div id="checkingsD"></div>
                                 <div id="savingsD"></div>
